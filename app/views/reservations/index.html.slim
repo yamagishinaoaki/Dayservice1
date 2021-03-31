@@ -1,0 +1,23 @@
+<header>
+  <div class="header-logo">
+    <a href="">放課後デイサービスサニーハウス</a>
+  </div>
+  <ul class="header-menus">
+    <li>
+      <a href="">ご利用予約</a>
+    </li>
+    <li>
+     <a href="">ご利用状況確認</a>
+    </li>
+    <li>
+     <a href="">ログアウト</a>
+    </li>
+    <% if session[:user_id] %>
+    <li>
+     <%= session[:user_id] %>
+    </li>
+     <% end %>
+        
+  </ul>
+</header>
+<h1>放課後デイサービスサニーハウス</h1>
