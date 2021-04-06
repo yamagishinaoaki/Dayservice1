@@ -60,3 +60,4 @@ gem 'html2slim'
 gem 'bootstrap'
 gem 'rb-readline'
 gem 'pry-rails'
+gem "simple_calendar", "~> 2.0"

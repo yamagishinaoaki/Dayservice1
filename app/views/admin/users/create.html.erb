@@ -10,7 +10,7 @@
      <a href="">ご利用状況確認</a>
     </li>
     <li>
-     <a href="">ログアウト</a>
+     li.nav-item= link_to 'ログアウト1', logout_path, method: :delete, class: 'nav-link'
     </li>
     <% if session[:user_id] %>
     <li>

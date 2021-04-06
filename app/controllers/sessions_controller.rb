@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
     
     if user&.authenticate(session_params[:password])
       session[:user_id] = user.id
-      redirect_to("/#{user.id}")
+      redirect_to("/admin/users/create#{user.id}")
     else
       render :new
     end
@@ -15,7 +15,7 @@ class SessionsController < ApplicationController
 
   def destroy
     reset_session
-    redirect_to root_url, notice: 'ログアウトしました。'
+    redirect_to("/login")
   end
 
   private
@@ -23,5 +23,4 @@ class SessionsController < ApplicationController
   def session_params
     params.require(:session).permit(:email, :password)
   end
-  
 end

@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   get "/admin/users/:id" => "admin/users#show"
   get "/login" => "sessions#new"
   post "/login" => "sessions#create"
+  post "/logout" => "sessions#destroy"
+  post "reservations/id"=>"reservations#create"
   get "reservations/id"=>"reservations#index"
   namespace :admin do
     resources :users

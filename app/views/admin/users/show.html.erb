@@ -4,13 +4,13 @@
   </div>
   <ul class="header-menus">
     <li>
-      <a href="">ご利用予約</a>
+      <a href="/reservations">ご利用予約</a>
     </li>
     <li>
      <a href="">ご利用状況確認</a>
     </li>
     <li>
-     <a href="">ログアウト</a>
+      <%= link_to("ログアウト", "/login", {method: "post"}) %>
     </li>
     <% if session[:user_id] %>
     <li>
